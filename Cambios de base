@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main(){
+	int n;
+	cout << "ingrese el numero: ";
+	cin >> n;
+	int base;
+	cout << "ingrese la base: ";
+	cin >> base;
+	int contador = 0;
+	int base10 = 0;
+	while (n>0){
+		int r = n%10;
+		cout << r << "\n";
+		n= n/10;
+		base10+=r*pow(base,contador);
+		contador++;
+	}
+	  return 0;
+  }
