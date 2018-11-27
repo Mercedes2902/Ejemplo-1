@@ -1,0 +1,80 @@
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+class Cliente{
+protected:
+    string codigo;
+    int tiempo;
+public:
+    Cliente(string,int);
+    void Codigo();
+    void Tiempo();
+};
+
+Cliente::Cliente(string _codigo, int _tiempo) {
+    codigo = _codigo;
+    tiempo = _tiempo;
+}
+
+void Cliente::Codigo() {
+    int n;
+    string nombre[n];
+    cout << "Ingrese su codigo: ";
+    cin >> nombre[n];
+
+}
+
+void Cliente::Tiempo() {
+    int num;
+    num = 3+rand()%(16-3);
+    cout << num;
+}
+
+class Cajero {
+private:
+    string nombre;
+public:
+    Cajero(string);
+    void Nombre();
+};
+
+Cajero::Cajero(string _nom) {
+    nombre = _nom;
+}
+
+void Cajero::Nombre() {
+    string AR[5] = {"C0","C1","C2","C3","C4"};
+    for(int i = 0; i<5; i++){
+        cout << AR[i]<< " ";
+        //break;
+    }
+}
+
+int main() {
+    int n;
+    cout << "Ingrese cantidad de clientes: "<< endl;
+    cin >> n;
+
+    for(int i = 0; i < n; i ++){
+        Cliente c1 = Cliente("0",0);
+        c1.Codigo();
+        for (int j = 0; j < n ; j++) {
+            c1.Tiempo();
+            cout << endl;
+            break;
+        }
+    }
+
+    /*for (int k = 0; k < n ; k++) {
+        Cajero a1 = Cajero(" ");
+        a1.Nombre();
+        break;
+    }*/
+
+
+
+
+    return 0;
+}
